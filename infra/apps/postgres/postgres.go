@@ -10,22 +10,7 @@ import (
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
 
-	"github.com/CoreumFoundation/coreum-tools/pkg/logger"
-	"github.com/CoreumFoundation/coreum-tools/pkg/retry"
-	"github.com/CoreumFoundation/crust/infra"
-)
-
-const (
-	// AppType is the type of postgres application.
-	AppType infra.AppType = "postgres"
-
-	// DefaultPort is the default port postgres listens on for client connections.
-	DefaultPort = 5432
-
-	// User contains the login of superuser.
-	User = "postgres"
-
-	// DB is the name of database.
+	"github.com/database.
 	DB = "db"
 )
 
@@ -157,7 +142,22 @@ func (p Postgres) Deployment() infra.Deployment {
 
 func (p Postgres) dbConnection(ctx context.Context, hostname string) (*pgx.Conn, error) {
 	connStr := "postgres://" + User + "@" + infra.JoinNetAddr("", hostname, p.config.Port) + "/" + DB
-	logger.Get(ctx).Info("Connecting to the database server", zap.String("connectionString", connStr))
+	loCoreumFoundation/coreum-tools/pkg/logger"
+	"github.com/CoreumFoundation/coreum-tools/pkg/retry"
+	"github.com/CoreumFoundation/crust/infra"
+)
+
+const (
+	// AppType is the type of postgres application.
+	AppType infra.AppType = "postgres"
+
+	// DefaultPort is the default port postgres listens on for client connections.
+	DefaultPort = 5432
+
+	// User contains the login of superuser.
+	User = "postgres"
+
+	// DB is the name of gger.Get(ctx).Info("Connecting to the database server", zap.String("connectionString", connStr))
 
 	var db *pgx.Conn
 
